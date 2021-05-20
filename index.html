@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <meta charset="utf-8"/> 
+    <title>Portifólio Do Marcão</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left">
+                <div class="link">
+                    <a href="index.html">Home</a>
+                </div>
+                
+                <div class="link">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+                <div class="center">
+                 <img src="images/logos/cortado.png">
+                </div>
+            <div class="right">
+                <div class="brand">
+                    <div>Marcus Arcanjo</div>
+                </div>
+            </div>
+        </div>
+        <div class="conteudo">
+            <div class="portifolio-items">
+                <div class="portifolio-item">
+                    <div class="portifolio-img-background" style="background-image:url(images/adrian-korte-5gn2soeAc40-unsplash.jpg)">
+                    </div>
+                    <a href="artigos.html">
+                        <div class="image-text">
+                            <div class="logo">
+                                <img src="images/logos/accordion.png">
+                            </div>
+                            <div class="subtitle">
+                                Artigos
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+
+                <div class="portifolio-item">
+                    <div class="portifolio-img-background" style="background-image:url(images/blocks-T3mKJXfdims-unsplash.jpg)">
+                    </div>
+                    <div class="image-text">
+                        <div class="logo">
+                            <img src="images/logos/sound (1).png">
+                        </div>
+                        <div class="subtitle">
+                            Músicas Autorais
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="portifolio-item">
+                    <div class="portifolio-img-background" style="background-image:url(images/c-d-x-PDX_a_82obo-unsplash.jpg)">
+                    </div>
+                    <div class="image-text">
+                        <div class="logo">
+                            <img src="images/logos/guitar (1).png">
+                        </div>
+                        <div class="subtitle">
+                            Escreve uns trem
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="portifolio-item">
+                    <div class="portifolio-img-background" style="background-image:url(images/james-stamler-k3heD_KwH0A-unsplash.jpg)">
+                    </div>
+                    <div class="image-text">
+                        <div class="logo">
+                            <img src="images/logos/guitar.png">
+                        </div>
+                        <div class="subtitle">
+                            Coming soon ... 
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="portifolio-item">
+                    <div class="portifolio-img-background" style="background-image:url(images/marius-masalar-rPOmLGwai2w-unsplash.jpg)">
+                    </div>
+                    <div class="image-text">
+                        <div class="logo">
+                            <img src="images/logos/music-note.png">
+                        </div>
+                        <div class="subtitle">
+                            Comming soon
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="portifolio-item">
+                    <div class="portifolio-img-background" style="background-image:url(images/namroud-gorguis-FZWivbri0Xk-unsplash.jpg)">
+                    </div>
+                    <div class="image-text">
+                        <div class="logo">
+                            <img src="images/logos/sound (1).png">
+                        </div>
+                        <div class="subtitle">
+                            Comming soon...
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+
+                
+
+
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script> 
+    const portifolioItems = document.querySelectorAll('.portifolio-item');
+
+    portifolioItems.forEach(portifolioItem => {
+        portifolioItem.addEventListener('mouseover', ()=>{
+            portifolioItem.childNodes[1].classList.add('img-darken');
+        })
+        portifolioItem.addEventListener('mouseout', ()=>{
+            portifolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
+</html>

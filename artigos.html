@@ -33,77 +33,6 @@
                 <div class="r s t u">
                     <div class="af">
                         <div class="aj dr">
-                            
-                            <div class="kg">
-                                <div class="ki iq bv">
-                                    <div class="titulo_artigo">
-                                        Titulo aqui !
-                                    </div>
-                                    <div class="descricao">
-                                        Descricao extremamente detalhada
-                                    </div>
-                                </div>
-                                <div class="imagem_artigo">
-                                    <img src="images/james-stamler-k3heD_KwH0A-unsplash.jpg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="kg">
-                                <div class="ki iq bv">
-                                    <div class="titulo_artigo">
-                                        Titulo aqui !
-                                    </div>
-                                    <div class="descricao">
-                                        Descricao extremamente detalhada
-                                    </div>
-                                </div>
-                                <div class="imagem_artigo">
-                                    <img src="images/james-stamler-k3heD_KwH0A-unsplash.jpg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="kg">
-                                <div class="ki iq bv">
-                                    <div class="titulo_artigo">
-                                        Titulo aqui !
-                                    </div>
-                                    <div class="descricao">
-                                        Descricao extremamente detalhada
-                                    </div>
-                                </div>
-                                <div class="imagem_artigo">
-                                    <img src="images/james-stamler-k3heD_KwH0A-unsplash.jpg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="kg">
-                                <div class="ki iq bv">
-                                    <div class="titulo_artigo">
-                                        Titulo aqui !
-                                    </div>
-                                    <div class="descricao">
-                                        Descricao extremamente detalhada
-                                    </div>
-                                </div>
-                                <div class="imagem_artigo">
-                                    <img src="images/james-stamler-k3heD_KwH0A-unsplash.jpg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="kg">
-                                <div class="ki iq bv">
-                                    <div class="titulo_artigo">
-                                        Titulo aqui !
-                                    </div>
-                                    <div class="descricao">
-                                        Descricao extremamente detalhada
-                                    </div>
-                                </div>
-                                <div class="imagem_artigo">
-                                    <img src="images/james-stamler-k3heD_KwH0A-unsplash.jpg" alt="">
-                                </div>
-                            </div>
-
 
                         </div>
                     </div>
@@ -113,5 +42,31 @@
         
     </div>
 </body>
+<script src="js/artigos.js"></script>
+<script>
+    let main = document.querySelector(".aj");
 
+    artigos.forEach(artigo => {
+    main.innerHTML += `
+    
+    
+    <div class="kg">
+        <div class="ki iq bv">
+            <div class="titulo_artigo">
+                ${artigo.titulo}
+            </div>
+            <div class="descricao">
+                ${artigo.resumo}
+            </div>
+            </div>
+            <a href="artigo.html?titulo=${artigo.titulo}">
+            <div class="imagem_artigo">
+                <img src="${artigo.cover}" alt="">
+            </div>
+            </a>
+        </div>
+    </div>
+    `;
+});
+</script>
 </html>

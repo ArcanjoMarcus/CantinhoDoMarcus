@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <meta charset="utf-8"/> 
+    <title>Portifólio Do Marcão</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left">
+                <div class="link">
+                    <a href="index.html">Home</a>
+                </div>
+                
+                <div class="link">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+                <div class="center">
+                 <img src="images/logos/cortado.png">
+                </div>
+            <div class="right">
+                <div class="brand">
+                    <div>Marcus Arcanjo</div>
+                </div>
+            </div>
+        </div>
+        <div class="conteudo">
+            <div class="pre_artigo">
+                <div class="artigo">
+                
+                    <div class="titulo_conteudo_artigo"> Aqui fica o título</div>
+
+                    <div class="resumo_artigo">Resuminho</div>
+
+                    <div class="texto_artigo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget finibus erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse bibendum sapien sit amet lorem sagittis maximus. Suspendisse ante dui, fermentum et tincidunt sed, tristique eu nisl. Sed eleifend sapien in dui tristique dignissim. Mauris placerat quis ex et maximus. Integer semper, velit ut efficitur maximus, eros dolor hendrerit nulla, vitae porta tortor mauris a nunc. Fusce ex ipsum, iaculis a sapien vitae, tempus pellentesque dui. Proin ullamcorper neque ac sem fermentum, nec vehicula libero hendrerit. Morbi eget est tempor, iaculis odio non, lacinia tellus. Fusce vel fringilla ex, et dictum magna. Curabitur egestas odio ut lacus consequat, a facilisis elit ultrices. Phasellus venenatis accumsan erat at laoreet. Pellentesque efficitur mauris non consequat posuere. Fusce tempus pulvinar condimentum. Sed leo quam, mattis nec massa sit amet, ornare luctus sapien.
+
+                        Fusce at posuere ligula. Nunc id gravida odio. Maecenas fermentum nisi ante, non ultricies leo condimentum vitae. Vestibulum vel lectus vel elit consequat mollis. Donec eu dui et dui sollicitudin viverra nec sed augue. Donec convallis id magna quis ultrices. Etiam semper, nisl at ultrices pharetra, justo neque porta odio, non fermentum lectus nunc ac dui. Vestibulum blandit sagittis ornare.
+                        
+                        Nulla tristique tristique est non malesuada. Quisque volutpat ligula eget ligula interdum, rhoncus pretium ex sagittis. Donec eu quam sit amet velit lobortis fringilla at vitae nulla. In hac habitasse platea dictumst. Donec imperdiet neque in felis tristique, sed placerat nulla ultrices. Duis vel ornare purus. Suspendisse ullamcorper molestie pellentesque.
+                        
+                        Cras id vestibulum est, ut fermentum metus. Nam sed urna tempus, auctor tortor non, pulvinar arcu. Nunc maximus turpis id erat porttitor iaculis. Nunc interdum ipsum sapien, at placerat erat cursus nec. Nulla et purus eget erat tincidunt rhoncus at vel felis. Fusce id placerat mi. Mauris congue consequat nisl, vitae commodo sapien pharetra sed. Donec metus libero, porttitor sed aliquet vitae, pharetra sed massa. In placerat dignissim lorem, id facilisis tortor vulputate sit amet. Sed fringilla volutpat elit. Aliquam id congue diam.
+                        
+                        Pellentesque mattis rhoncus tincidunt. Mauris posuere, enim nec maximus varius, felis ex gravida ligula, a condimentum leo sapien at mi. Aenean ut ex in augue aliquet suscipit. Integer vitae dolor finibus, elementum augue id, elementum velit. In ultrices arcu et urna laoreet viverra. Etiam vulputate facilisis maximus. Curabitur in congue nisl. In urna nisl, sagittis quis consectetur sit amet, dictum a risus. Nulla feugiat elementum quam, id tincidunt ante porttitor non.
+                        sandfjnsdlkjfhnsdf
+                        sandfkjhsndlfkjnsdf
+                        sdkjfnhkjsdnflhkjsn
+                    </div>
+                        
+                            
+
+                
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script src="js/artigos.js"></script>
+<script>
+    const queryString = window.location.search;
+    console.log(queryString)
+    const urlParams = new URLSearchParams(queryString);
+    console.log(urlParams);
+
+    let main = document.querySelector(".artigo");
+    const titulo = urlParams.get('titulo');
+
+    console.log(titulo);
+
+    var artigo = artigos.filter(artigo => titulo == artigo.titulo);
+    console.log(artigo);
+    main.innerHTML = `
+    <div class="titulo_conteudo_artigo">${artigo[0].titulo}</div>
+
+    <div class="resumo_artigo">${artigo[0].resumo}</div>
+
+    <div class="texto_artigo">${artigos[0].conteudo}</div>`
+</script>
+</html>
